@@ -13,7 +13,7 @@ Vous trouverez ici toutes les informations concernant :
 * Les projets en cours destinées ou non à être présent dans le catalogue
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    formations
