@@ -8,3 +8,4 @@ Sur cette page vous trouverez l'ensemble des projets en cours de l'Infini Fab, q
    :caption: Contents:
 
    laser_bocal
+   laser_manuel

@@ -84,7 +84,7 @@ Octoprint est un serveur dédié installé sur un Raspberry Pi qui permete de co
 Ce type de serveur permet la préparation d'un job d'un manière classique(jusqqu'à obtention du gcode) sur un PC, puis d'envoyer le gcode sur Octoprint.
 Cela permet de garder /path/to/fileun suivi des job qui sont exécuter sur la machine.
 
-:download:`Methode utilisée pour configurer l'Octoprint pour le Smoothieboard<https://github.com/foosel/OctoPrint/wiki/Setup-OctoPrint-with-Smoothie>`
+`Methode utilisée pour configurer l'Octoprint pour le Smoothieboard <https://github.com/foosel/OctoPrint/wiki/Setup-OctoPrint-with-Smoothie>`_
 
 
 Le capteur de temperature
@@ -103,9 +103,9 @@ Le tube laser est sensible au hausse de température, pour éviter une surchauff
 * 7 Resistance 220 Ohm
 * 1 Resistance 10 kOhm
 
-:download:`Mesurer la température <https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino/>`
+`Mesurer la température <https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino/>`_
 
-:download:`page où le code pour afficher la température à été récuperer <https://randomnerdtutorials.com/arduino-temperature-displayed-on-4-digit-7-segment/>`
+`page où le code pour afficher la température à été récuperer <https://randomnerdtutorials.com/arduino-temperature-displayed-on-4-digit-7-segment/>`_
 
 :download:`le code final <code/k40_temp_measurement.ino>`
 
@@ -146,23 +146,28 @@ Le type de capteur utilisé sur la k40 de base
   :height: 100px
 
 à priori il fonctionne mais le cablâge n'est plus bon, il faut verifier que le capteur est correctment allimenté(trouver le 5V).
+Après plusieurs essais, on abandone l'utilisation du capteur d'origine.
+La solution est alors d'utiliser un captur méchanique simple.
+Il faut ensuite décider de l'emplacement du capteur puis modifier les parametres de la smoothie en fonction.
+
+`page explicant les parametre de smoothie sur les endstop <http://smoothieware.org/endstops>`_
 
 Securité du capôt
 -----------------
 
 Pour éviter que le laser ne tire avec le capôt ouvert, il faut installer un capteur de fin de course, on peut suivre l'exemple de la video suivante.
 
-:download:`la video d'installation du capteur de fin de course <https://www.youtube.com/watch?v=VZTmWC3sXR0>`
+`la video d'installation du capteur de fin de course <https://www.youtube.com/watch?v=VZTmWC3sXR0>`_
 
 Calibration des Moteurs
 -----------------------
 
-:download:`simplement suivre ce tuto <http://smoothieware.org/laser-cutter-guide#configuring>`
+`simplement suivre ce tuto <http://smoothieware.org/laser-cutter-guide#configuring>`_
 
 Calibration des mirroirs
 ------------------------
 
-:download:`un très bon guide pour aligner les mirroirs<https://k40laser.se/lens-mirrors/mirror-alignment-the-ultimate-guide/>`
+`un très bon guide pour aligner les mirroirs <https://k40laser.se/lens-mirrors/mirror-alignment-the-ultimate-guide/>`_
 
 Modification du capot de commande
 ---------------------------------
@@ -189,9 +194,12 @@ Ecran de commande la laser
 
 On pourrait utilier un écran PiTFT pour pouvoir lancer des jobs en étant devant la laser.
 
-:download:`un possible moyen de le faire <http://projectable.me/raspberry-pi-touchscreen-octoprint-controller/>`
+`un possible moyen de le faire <http://projectable.me/raspberry-pi-touchscreen-octoprint-controller/>`_
 
 Manuel utilisateur
 ------------------
+
+
+:ref:`Manuel d'utilisation de la k40 <manuel-k40>`
 
 La méthode à utiliser pour usiner un job sera surrement via le logiciel Visicut, qui permet de génerer du G-code pour du raster ou de la coupe à partir d'un fichier d'image vectorielle ou d'une image pixelisée
