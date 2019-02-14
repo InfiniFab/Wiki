@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'Services & Wiki'
+project = u'Services & Wiki InfiniFab'
 copyright = u'2018, Jubo'
 author = u'Jubo'
 

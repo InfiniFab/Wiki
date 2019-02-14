@@ -40,12 +40,33 @@ Préparation du fichier
 Installation et configuration de Visicut
 ----------------------------------------
 
-* Installer Visicut
+* Installer `Visicut <https://visicut.org/>`_
 * Importer les parametres de la K40
-* Importer le fichier à usiner
+	* Option > Importer la configuration
+
+:download:`Parametre de la K40 <_static/k40_param.vcsettings>`
+
+* Importer le fichier à usiner, doit etre un fichier image (Jpeg, Svg, Bmp, Png, ...) Fichier > Importer
 * Selectionner les parametres de coupe/gravure
-* Ajuster si besoin
+	* Pour graver une image
+		* importer une image pixelisée (JPEG, BMP, PNG, ...)
+		* Dans la partie de droite il y a 3 onglet "configuration", "position" et "configuration du laser"
+		* Dans l'onglet "Configuration", vous pouvez choiser "Tout engrave 3d"
+		* Dans l'onglet "Coonfiguration du laser", choisi les parametres qui conviennent le mieux, se referer au document ci dessous pour choisir les bons parametres
+	* Pour découper selon une image
+		* Importer une image de type vectoriel (SVG, IA, ...)
+		* dans l'onglet "Configuration", vous avez plusieurs choix, s'il n'y a qu'une seule couleur, vous pouvez choisir "tout engrave", sinon choisissez "configuration par simple propriété"
+		* Pour chaques couleurs du dessin vous pouvez choisir soit de couper ("cut"), ou de graver. Si la couleur est une forme pleine, et si vous choisissez de couper, visicut detectera automatiquement les contours de la couleur
+* Ajuster si besoin, pour s'inspirer vous avez le docuent suivant
+
+:download:`Idée de parametre pour la gravure et la découpe en fonction du materiau <_static/speedsfeeds_RL.pdf>`
+
+.. attention::
+
+	Les paramêtres donnés ici ne sont pas une réference absolus, ceux ci peuvent dépendre de l'état du tube laser , il est vivement conseiller de **tester les parametres choisis sur un échantillon** avant de lancer le job définitif.
+
 * Exporter le job en G-code
+	* Fichier > Exporter le G-Code
 * Se connecter à Octoprint
 
 
@@ -54,7 +75,7 @@ Lancement du job
 
 * Sur Octoprint, importer le G-code générer sur Visicut
 * Verifier les limites du job
-* Lancer le job
+* Lancer le job via "print"
 
 Après le job
 """"""""""""
