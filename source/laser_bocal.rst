@@ -23,15 +23,15 @@ Reste à faire
 
 * |cercle_jaune| Installer un nouveau lit pour exploiter toute la surface de la laser `Le nouveau lit`_
 * |cercle_jaune| Changer la tête du laser pour ajuster le focus du laser `La tête du laser`_
-* |cercle_jaune| Remmetre ou réparer le capteur de fin de course en Y `Capteur de fn de course en Y`_
-* |cercle_jaune| Mettre une sécurité sur le capôt de la laser `Securité du capôt`_
-* |cercle_rouge| Callibrer les pas des moteurs pour avoir un déplacement précis `Calibration des Moteurs`_
+* |cercle_vert| Remmetre ou réparer le capteur de fin de course en Y `Capteur de fn de course en Y`_
+* |cercle_vert| Mettre une sécurité sur le capôt de la laser `Securité du capôt`_
+* |cercle_vert| Callibrer les pas des moteurs pour avoir un déplacement précis `Calibration des Moteurs`_
 * |cercle_rouge| Ajuster les mirroirs `Calibration des mirroirs`_
 * |cercle_rouge| Usiner le capot de la partie commande de la laser pour y integrer le thermometre `Modification du capot de commande`_
 * |cercle_rouge| Fixer la smoothieboard, le level shifter, l'arduino et le raspberry pi dans la partie commande de la k40 `Ammenagement de la partie commande`_
 * |cercle_rouge| mettre un guide pour l'arrivée d'air & installer laser visible, reparer la vitre du capot `Ammenager de la partie usinage`_
 * |cercle_rouge| Ajouter un PiTFT au raspberry Pi pour demarer un job en étant devant la Laser `Ecran de commande la laser`_
-* |cercle_rouge| Ecrire un manuel d'utilisation pour la Laser `Manuel utilisateur`_
+* |cercle_jaune| Ecrire un manuel d'utilisation pour la Laser `Manuel utilisateur`_
 
 .. |cercle_rouge| image:: img/red.png
   :height: 10px
@@ -40,6 +40,15 @@ Reste à faire
   :height: 10px
 
 .. |cercle_vert| image:: img/geen.png
+  :height: 10px
+
+La situation Actuelle
+"""""""""""""""""""""
+
+Aujourd'hui la K40 est situé dans le local de l'association Science&Bidouille à Angers, et est à disposition d'un nombre limité d'utilisateur pour l'instant.
+La K40 Permet aujourd'hui de faire uniquement de la gravure, il faut regler les mirroirs et les nettoyer pour gagner en puissance.
+
+:download:`Le fichier de configuration actuel <_static/config>`
 
 Les réparations
 """""""""""""""
@@ -121,7 +130,9 @@ L'idéal serait un lit en nid d'abeille
 
 .. image :: img/honeycombe.jpg
 
-Mais un grillage, une plaque trouée devrait suffire
+Mais un grillage, une plaque trouée devrait suffire.
+On a pu récuperer des grillages qui étant le devant de chauffage électrique. On a suffisement de surface pour doubler la couche de grillage pour le lit, cela pourrait augmenter la rigidité de celui-ci.
+On n''install pas de nouveau lit avant d'avoir installer une nouvelle tête.
 
 La tête du laser
 ----------------
@@ -145,17 +156,24 @@ Le type de capteur utilisé sur la k40 de base
   :target: https://www.vishay.com/docs/83763/tcst1030.pdf
   :height: 100px
 
+
 à priori il fonctionne mais le cablâge n'est plus bon, il faut verifier que le capteur est correctment allimenté(trouver le 5V).
 Après plusieurs essais, on abandone l'utilisation du capteur d'origine.
-La solution est alors d'utiliser un captur méchanique simple.
-Il faut ensuite décider de l'emplacement du capteur puis modifier les parametres de la smoothie en fonction.
+La solution est alors d'utiliser un capteur méchanique simple.
+
+.. image:: http://forain-francois-verdier.ecollege.haute-garonne.fr/lectureFichiergw.do?ID_FICHIER=1450339321811
+  :height: 100px
+
+On a installer le capteur en bas du guide de l'axe Y à gauche.
+Dans les fichiers de config de la smoothie, la valeur de Y augmente du haut vers le bas.
+Dans le fichier de config de la smoothie on a donc un home to max sur l'axe beta.
 
 `page explicant les parametre de smoothie sur les endstop <http://smoothieware.org/endstops>`_
 
 Securité du capôt
 -----------------
 
-Pour éviter que le laser ne tire avec le capôt ouvert, il faut installer un capteur de fin de course, on peut suivre l'exemple de la video suivante.
+Pour éviter que le laser ne tire avec le capôt ouvert, on a installé un capteur de fin de course, on a suivi l'exemple de la video suivante.
 
 `la video d'installation du capteur de fin de course <https://www.youtube.com/watch?v=VZTmWC3sXR0>`_
 
@@ -163,6 +181,17 @@ Calibration des Moteurs
 -----------------------
 
 `simplement suivre ce tuto <http://smoothieware.org/laser-cutter-guide#configuring>`_
+
+Pour regler les parametres correctement, on commande un déplacement de 100mm, on mesure le déplacement obtenu puis on fait un produit en croix pour obtenir le nouveau parametre de "step per mm" pour l'axe voulu
+
+:math:`nouveau..step..per..mm=\frac{ancien..step..per..mm * deplacement..désiré}{deplacement..mesuré}`
+
+Modulation de la puissance du laser
+-----------------------------------
+
+La smoothie permet de controller la puissance du laser en puissance en modifiant `la proportion du temps où le laser est allumé <https://fr.wikipedia.org/wiki/Modulation_de_largeur_d%27impulsion>`_
+
+On active le parametre "laser_module_pwm_period " et on le met à 200
 
 Calibration des mirroirs
 ------------------------
