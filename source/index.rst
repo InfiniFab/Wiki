@@ -12,13 +12,25 @@ Vous trouverez ici toutes les informations concernant :
 * Les formations pouvant être dispensées par l'Infini Fab
 * Les projets en cours destinées ou non à être présent dans le catalogue
 
+
+
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Sommaire:
 
    formations
    projets
 
+Comment Aider cette documentation ?
+-----------------------------------
+
+Tout les aides sont les bienvenus consulter ici le manuel pour contribuer à e wiki
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Comment aider:
+
+   Doc_manuel
 
 
 Indices and tables
