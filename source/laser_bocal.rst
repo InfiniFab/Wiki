@@ -1,3 +1,5 @@
+.. _laser_bocal:
+
 Remise à neuf de la K40 à Chemillé
 ##################################
 
