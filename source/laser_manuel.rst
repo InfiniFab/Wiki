@@ -87,3 +87,47 @@ Après le job
 * Eteindre l'evacuation d'air
 * eteindre le compresseur
 * eteindre la multiprise
+
+
+Un exemple d'utilisation - Pyrograver une image sur un support
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Dans le cadre du MakeMe Fest à Cholet, une petite activité avec la découpeuse laser est proposée.
+Des petits supports en bois on déjà prédécoupés. L'objectif est de graver à la laser l'image voulue sur ces supports, cela peut être une photo, ou un symbole.
+
+Vous trouverez ci-dessous toutes les étapes à respecter.
+
+Choisir l'image voulue
+----------------------
+
+A priori, le format de l'image a peu d'importance, donc choisissez ce que vous voulez.
+Telecharger l'image sur le disque du PC utilisé.
+
+Traduire l'image pour que la découpeuse laser la comprenne / Importer l'image dans visicut
+------------------------------------------------------------------------------------------
+
+Dans l'activité proposée Visicut est déjà installé, il suffit de suivre les étapes suivantes :
+
+* Importer l'image voulue dans visicut
+* Dans l'onglet "Configuration" Selectionnez "tout engrave 3D"
+* Dans l'onglet "position" mettez les parametres suivants :
+	* x : 123.1 mm
+	* y : 13.4 mm
+	* width : 58 mm
+	* height: 38 mm
+* Dans l'onglet mettez "100" pour "Power", et "100" pour "speed"
+* Exportez le G-code
+
+Le fichier G-code est le fichier qui sera compris par la découpeuse laser
+
+Gravez votre image / Commander la découpeuse laser
+--------------------------------------------------
+
+La découpeuse laser est commandée par un petit ordinateur (un rapsberry Pi). Il faut donc envoyer sur ce petit ordinateur le fichier G-code que vous avez produit.
+
+* Connectez vous à l'ordinateur (Octoprint) via son adresse IP.
+* Uploadez votre fichier Gcode
+* Lancer le print
+
+Cela devrait prendre environ 10 minute, attendez bien que toutes les fumées soient évacuées puis récuperer votre image gravée.
+Monter ensuite votre image sur son support.

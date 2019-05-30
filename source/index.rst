@@ -3,39 +3,35 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bienvenu sur la documentation concernant les services et les actions de l'Infini Fab
+Bienvenu sur la documentation concernant les services et les actions de l'InfiniFab
 ====================================================================================
 
-Cette partie du site a pour but de lister toutes les activités de l'Infini Fab qui ne sont pas relié directement avec le catalogue Infini Fab.
+Vous trouverez ici basiquement toutes les informations concernant le projet de l'InfiniFab.
 
-Vous trouverez ici toutes les informations concernant :
-* Les formations pouvant être dispensées par l'Infini Fab
-* Les projets en cours destinées ou non à être présent dans le catalogue
+**Pourquoi passer par ce format ?**
+
+L'idée en faisant quasiment QUE de la documentation, est d'avoir un moyen de vous faire participer au projet d'une manière qui me semble la meilleure.
+De mon côté cela me permet d'avoir un moyen simple de mettre à jour ces informations, et de votre côté vous pouvez apporter vos idées sans avoir besoin d'un compte utilisateur en plus (il vous faut juste un compte sur Github).
+
+:ref:`Vous trouverez ici les indications pour participer à la documentation <Doc_manuel>`
+
+Vous pouvez continuer votre visite pour connaitre tout du projet InfiniFab !
 
 
 
 .. toctree::
    :maxdepth: 1
    :caption: Sommaire:
+   :hidden:
 
-   formations
+   infinifab
+   services
    projets
 
-Comment Aider cette documentation ?
------------------------------------
-
-Tout les aides sont les bienvenus consulter ici le manuel pour contribuer à e wiki
 
 .. toctree::
    :maxdepth: 1
-   :caption: Comment aider:
+   :caption: Comment aider?:
+   :hidden:
 
    Doc_manuel
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

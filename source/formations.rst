@@ -1,13 +1,6 @@
 Les Formations de l'Infini Fab
 ##############################
 
-La raison d'exister de l'Infini Fab est de démocratiser les fablabs, de permettre à n'importe qui de pousser la porte d'un fablab et d'y construire son projet.
-
-L'outil choisi choisi pour permettre cette démocratisation est le catalogue, qui propose une fabrication et un accompagnement pour que l'usager reparte avec un produit concret.
-
-Malgré tout, augmenter l'accessibilité des fablabs passe aussi par des formations, celles-ci permettent de sensibiliser un plus grand nombre de (futurs) bidouilleurs sur des sujets plus généraux.
-
-Vous avez si dessous l'ensemble des formation proposées par l'Infini Fab ainsi que le déroulement pédagogique associées à chacunes:
 
 Conception Assisté par Ordinateur (CAO)
 ***************************************
