@@ -36,8 +36,13 @@ Pour la rennovation
 * |cercle_rouge| mettre un guide pour l'arrivée d'air & installer laser visible, reparer la vitre du capot `Aménagement de la partie usinage`_
 * |cercle_rouge| Ajouter un PiTFT au raspberry Pi pour demarer un job en étant devant la Laser `Ecran de commande la laser`_
 * |cercle_rouge| Déclencher le compresseur uniquement quand on tire du laser `Declenchement du compresseur commandé par le laser`_
-* |cercle_rouge| Regler l'alimentation du thermometre `Alimentation thermometre`_
-* |cercle_rouge| Empecher le laser de tirer si la smoothie n'est pas alimentée `Prevention du laser`_
+* |cercle_rouge| Regler l'alimentation du thermometre `Alimentation thermomètre`_
+* |cercle_rouge| Empecher le laser de tirer si la smoothie n'est pas alimentée `Prévention du laser`_
+* |cercle_rouge| Refroidir le tube laser `Le refroidissement du tube laser`_
+* |cercle_rouge| L'alimentation du tube `L'alimentation du tube`_
+* |cercle_rouge| L’amélioration des miroirs/optique `L’amélioration des miroirs/optique`_
+* |cercle_rouge| Le changement du tube `Le changement du tube`_
+
 
 Pour la callibration
 ====================
@@ -282,7 +287,7 @@ Declenchement du compresseur commandé par le laser
 |cercle_rouge|
 On peut utiliser la sortie de la smoothieboard "laser_module_ttl_pin" à récuperer sur l'Arduino Nano utilisé pour le capteur de température qui commanderais alors le comprésseur
 
-Alimentation thermometre
+Alimentation thermomètre
 ------------------------
 
 |cercle_rouge|
@@ -293,7 +298,7 @@ Le probleme actuellement est que Octoprint doit detecter automatiquement la smoo
 * trouver un moyen pour octoprint de ne pas confondre la smoothieboard et l'arduino nano (la plus propre)
 * Récuperer une tension d'alimentation pour l'Arduino nano, via la smoothie ou directement via une prise 220V
 
-Prevention du laser
+Prévention du laser
 -------------------
 
 |cercle_rouge|
@@ -301,8 +306,44 @@ Si l'on alume la K40, que l'on enclenche le laser sans avoir brancher la smoothi
 Cela peut etre prevenu en s'assurant que la smoothie soit alimentée via USB avant d'enclencherle laser, Néanmoins c'est perturbant de ne pas avoir la smoothie qui démarre quand on allume la K40.
 
 Si la smoothie est branchée en permanence sur le Rasperry, lors pas de soucis.
-Sinon trouver un moyen de démarer la smoothie quand on allume la K40
+Sinon trouver un moyen de démarrer la smoothie quand on allume la K40
 
+Le refroidissement du tube laser
+--------------------------------
+
+|cercle_rouge|
+Le tube laser chauffe, et ça c'est très mauvais, nous avons malheureusement déjà expérimenté avec un job de 30 minutes et la température est restée à 34°C.
+Le tube à priori a déjà subit cette surchauffe, il fonctionne encore mais il faudrait le changer à un moment.
+Dans tout les cas, pour pouvoir effectuer des jobs de longues durée, il faut mettre en place un système de refroidissement du liquide qui circule dans le tube laser.
+On va s'orienter vers une solution à base de `module à effet Peltier. <https://www.aliexpress.com/item/TEC1-12705-Thermoelectric-Cooler-Peltier-TEC1-12706-TEC1-12710-TEC1-12715-40-40MM-12V-Peltier-Elemente/32320264423.html?spm=a2g0s.9042311.0.0.2af86c37aztgpN>`_
+`Une super video de GreatScott dont on peut s'inspirer <https://www.youtube.com/watch?v=1Kp_yWY2tdU&t=317s>`_
+
+L'idée pour l'instant c'est de récupérer le circuit de refroidissement d'un frigo ou d'un radiateur de voiture. Il faudra ensuite faire l'interface entre le module Peltier et le circuit de refroidissement (probablement une plaque d’aluminium)
+
+Pour finaliser il faudra un circuit fermé, dans lequel on ferra circuler le liquide de refroidissement, aujourd'hui on fait circuler de l'eau déminéralisé mais `il y a beaucoup mieux à faire <https://lasergods.com/laser-water-coolants-additives/?fbclid=IwAR2cJroxciE25WnR0vIsqu9FusANizIkPplB-48sEky1Y6X020pqLrpSlrU>`_
+
+L'alimentation du tube
+----------------------
+
+|cercle_rouge|
+Dans la machine il y a une alimentation générale qui alimente le tube. On a pu constater ses limites en cassant à priori le flyback du transformatteur. Il faudra changer cette pièce pour vérifier si c'est bien ça qui a casser
+`Le flyback qui a été commandé <https://fr.aliexpress.com/item/32800166037.html?spm=a2g0s.9042311.0.0.2af86c37aztgpN>`_
+
+Il est probable qu'on change l'ensemble de l’alimentation d'origine.
+
+L’amélioration des miroirs/optique
+----------------------------------
+
+|cercle_rouge|
+L'optique de base peut faire l'affaire un temps mais il est possible que celle-ci se brise ou s’abîme sous une utilisation intensive.
+Pour améliorer les performances on cherchera alors à changer le système d'optique (3 mirroir+ 1 lentille)
+
+Le changement du tube
+---------------------
+
+|cercle_rouge|
+Changement ultime sur la K40, le tube d'origine peut être remplacer par un tube ayant les même dimensions mais avec de bien meilleures caractéristiques.
+Le choix du constructeur sera alors essentiel.
 
 Pour la calibration
 ===================
@@ -321,9 +362,9 @@ Modulation de la puissance du laser
 -----------------------------------
 
 |cercle_jaune|
-La smoothie permet de controller la puissance du laser en puissance en modifiant `la proportion du temps où le laser est allumé <https://fr.wikipedia.org/wiki/Modulation_de_largeur_d%27impulsion>`_
+La smoothie permet de contrôler la puissance du laser en puissance en modifiant `la proportion du temps où le laser est allumé <https://fr.wikipedia.org/wiki/Modulation_de_largeur_d%27impulsion>`_
 
-On active le parametre "laser_module_pwm_period " et on le met à 200
+On active le paramètre "laser_module_pwm_period " et on le met à 200
 
 .. figure:: ../_static/ex_gravure.jpg
   :height: 100px
@@ -332,7 +373,7 @@ On active le parametre "laser_module_pwm_period " et on le met à 200
 
 On constate qu'on a bien une modulation du laser, mais peut-etre il est possible d'affiner cette modulation afin d'avoir une modulation mieux répartie entre "pas de laser du tout" c.à.d. S=0 et "laser au max" c.à.d. S=1
 
-La method utilisée
+La méthode utilisée
 
 .. figure:: ../_static/lasermodul.png
   :height: 300px
