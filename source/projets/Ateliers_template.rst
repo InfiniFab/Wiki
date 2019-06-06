@@ -51,9 +51,9 @@ Le mode d'emploi
 Les 1er exemples
 ^^^^^^^^^^^^^^^^
 
-:download:`Atelier sticker <_static/Workshop Template -FR - WS - Atelier sticker.pdf>`
+:download:`Atelier sticker <../_static/Workshop Template -FR - WS - Atelier sticker.pdf>`
 
-:download:`1ère soudure <_static/Workshop Template -FR - WS - Electronique.pdf>`
+:download:`1ère soudure <../_static/Workshop Template -FR - WS - Electronique.pdf>`
 
 La particiption à ce document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -24,7 +24,7 @@ Travaux effectués
 """""""""""""""""
 
 Pour la rennovation
--------------------
+===================
 
 * |cercle_vert| Installer un raspberry pi connecté à la smoothieboard pour mettre en place un serveur Octoprint  `Mise en place d'un serveur Octoprint`_
 * |cercle_vert| Installer un capteur de température pour le circuit de refroidissement du laser. `Le capteur de temperature`_
@@ -40,7 +40,7 @@ Pour la rennovation
 * |cercle_rouge| Empecher le laser de tirer si la smoothie n'est pas alimentée `Prevention du laser`_
 
 Pour la callibration
---------------------
+====================
 
 * |cercle_vert| Callibrer les pas des moteurs pour avoir un déplacement précis `Calibration des Moteurs`_
 * |cercle_jaune| Ajuster les mirroirs `Calibration des mirroirs`_
@@ -48,13 +48,13 @@ Pour la callibration
 * |cercle_jaune| Ecrire un manuel d'utilisation pour la Laser `Manuel utilisateur`_
 
 
-.. |cercle_rouge| image:: _static/red.png
+.. |cercle_rouge| image:: ../_static/red.png
   :height: 10px
 
-.. |cercle_jaune| image:: _static/yellow.png
+.. |cercle_jaune| image:: ../_static/yellow.png
   :height: 10px
 
-.. |cercle_vert| image:: _static/geen.png
+.. |cercle_vert| image:: ../_static/geen.png
   :height: 10px
 
 La situation Actuelle
@@ -63,7 +63,7 @@ La situation Actuelle
 Aujourd'hui la K40 est situé dans le local de l'association Science&Bidouille à Angers, et est à disposition d'un nombre limité d'utilisateur pour l'instant.
 La K40 Permet aujourd'hui de faire uniquement de la gravure, il faut regler les mirroirs et les nettoyer pour gagner en puissance.
 
-:download:`Le fichier de configuration actuel <_static/config>`
+:download:`Le fichier de configuration actuel <../_static/config>`
 
 Ce qui a été effectué au Boc@l
 """"""""""""""""""""""""""""""
@@ -124,7 +124,7 @@ Le tube laser est sensible au hausse de température, pour éviter une surchauff
 **Materiel**:
 * Sonde temperature DS18B20
 
-.. image :: _static/ds18b20.jpg
+.. image :: ../_static/ds18b20.jpg
   :height: 100px
 
 * Arduino nano
@@ -136,7 +136,7 @@ Le tube laser est sensible au hausse de température, pour éviter une surchauff
 
 `page où le code pour afficher la température à été récuperer <https://randomnerdtutorials.com/arduino-temperature-displayed-on-4-digit-7-segment/>`_
 
-:download:`le code final <_static/k40_temp_measurement.ino>`
+:download:`le code final <../_static/k40_temp_measurement.ino>`
 
 .. Note::
   Dans le code, on appelle la fonction température 1 fois toute les 1000 itérations de la loop pour avoir un affichage qui ne clignote pas
@@ -149,7 +149,7 @@ La surface de travail de base de la K40 est assez réduite, alors qu'elle peut e
 Il faudrait changer le type de lit, une surface métalique pleine telle que celle de base induit une réflexion du laser et donc sur le dessous du materiel à couper.
 L'idéal serait un lit en nid d'abeille
 
-.. image :: _static/honeycombe.jpg
+.. image :: ../_static/honeycombe.jpg
 
 Mais un grillage, une plaque trouée devrait suffire.
 On a pu récuperer des grillages qui étant le devant de chauffage électrique. On a suffisamment de surface pour doubler la couche de grillage pour le lit, cela pourrait augmenter la rigidité de celui-ci.
@@ -176,7 +176,7 @@ Plutôt que d'opter pour une solution où c'est le lit du laser qui doit changer
 
 Comme celle-ci :
 
-.. image :: _static/tetelaser.webp
+.. image :: ../_static/tetelaser.webp
   :target: https://fr.aliexpress.com/iteCapteur de fn de course en Ym/Cloudray-CO2-Laser-Head-Set-pour-2030-4060-K40-De-Gravure-Laser-Machine-De-D-coupe/32836741034.html
   :height: 100px
 
@@ -196,7 +196,7 @@ Capteur de fin de course en Y
 |cercle_vert|
 Le type de capteur utilisé sur la k40 de base
 
-.. image :: _static/fin_de_course-origin.jpeg
+.. image :: ../_static/fin_de_course-origin.jpeg
   :target: https://www.vishay.com/docs/83763/tcst1030.pdf
   :height: 100px
 
@@ -210,7 +210,7 @@ La solution est alors d'utiliser un capteur méchanique simple.
 
 On a installer le capteur en bas du guide de l'axe Y à gauche.
 
-.. figure:: _static/end_stop.jpg
+.. figure:: ../_static/end_stop.jpg
   :height: 100px
 
   Interrupteur end_stop sur la laser k40
@@ -231,7 +231,7 @@ Au niveau de la tête du laser, on a monté `l'embout suivant imprimé en 3D <ht
 
 Pour pouvoir souffler les particules vaporisées par le laser afin d'éviter qu'elle prennent feu, on dispose d'un souffleur. il a fallu réaliser un un embout imprimmé en 3D.
 
- :download:`Le fichier STL de l'embout <_static/embout_soufleur_2.stl>`
+ :download:`Le fichier STL de l'embout <../_static/embout_soufleur_2.stl>`
 
 Securité du capôt
 -----------------
@@ -325,21 +325,21 @@ La smoothie permet de controller la puissance du laser en puissance en modifiant
 
 On active le parametre "laser_module_pwm_period " et on le met à 200
 
-.. figure:: _static/ex_gravure.jpg
+.. figure:: ../_static/ex_gravure.jpg
   :height: 100px
 
-  grille de callibrage utiilisée pour tester le modulage de la puissance du laser
+  grille de callibrage utilisée pour tester le modulage de la puissance du laser
 
 On constate qu'on a bien une modulation du laser, mais peut-etre il est possible d'affiner cette modulation afin d'avoir une modulation mieux répartie entre "pas de laser du tout" c.à.d. S=0 et "laser au max" c.à.d. S=1
 
 La method utilisée
 
-.. figure:: _static/lasermodul.png
+.. figure:: ../_static/lasermodul.png
   :height: 300px
 
-:download:`Le code python utilisé pour générer le Gcode utilisé <_static/LaserModulation.py>`
+:download:`Le code python utilisé pour générer le Gcode utilisé <../_static/LaserModulation.py>`
 
-:download:`le Gcode généré <_static/laserModulation.gcode>`
+:download:`le Gcode généré <../_static/laserModulation.gcode>`
 
 Calibration des mirroirs
 ------------------------
@@ -360,13 +360,13 @@ En théorie, la vitesse maximum d'une k40 avec les moteurs de base est de 2000mm
 
 Il a fallut mettre en point la méthode suivante
 
-.. figure:: _static/laserspeedtest.png
+.. figure:: ../_static/laserspeedtest.png
   :height: 300px
 
 
-:download:`Le code python utilisé pour générer le Gcode utilisé <_static/Max_speed_callibration.py>`
+:download:`Le code python utilisé pour générer le Gcode utilisé <../_static/Max_speed_callibration.py>`
 
-:download:`le Gcode généré <_static/maxSpeedCal.gcode>`
+:download:`le Gcode généré <../_static/maxSpeedCal.gcode>`
 
 Tester l'épaisseur du laser
 ---------------------------
@@ -374,12 +374,12 @@ Tester l'épaisseur du laser
 Lors d'un parametrage d'une gravure ou d'une découpe sur Visicut, on a le paramêtre de l'épaisseur du laser.
 Pour avoir une découpe précise, on a mis au point la méthode suivante pour déterminer l'epaisseur du laser.
 
-.. figure:: _static/laserwidth.png
+.. figure:: ../_static/laserwidth.png
   :height: 300px
 
-:download:`Le code python utilisé pour générer le Gcode utilisé <_static/Laser_width.py>`
+:download:`Le code python utilisé pour générer le Gcode utilisé <../_static/Laser_width.py>`
 
-:download:`le Gcode généré <_static/laserWidth.gcode>`
+:download:`le Gcode généré <../_static/laserWidth.gcode>`
 
 
 

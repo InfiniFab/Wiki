@@ -44,7 +44,7 @@ Installation et configuration de Visicut
 * Importer les parametres de la K40
 	* Option > Importer la configuration
 
-:download:`Parametre de la K40 <_static/k40_param.vcsettings>`
+:download:`Parametre de la K40 <../_static/k40_param.vcsettings>`
 
 * Importer le fichier à usiner, doit etre un fichier image (Jpeg, Svg, Bmp, Png, ...) Fichier > Importer
 * Selectionner les parametres de coupe/gravure
@@ -59,7 +59,7 @@ Installation et configuration de Visicut
 		* Pour chaques couleurs du dessin vous pouvez choisir soit de couper ("cut"), ou de graver. Si la couleur est une forme pleine, et si vous choisissez de couper, visicut detectera automatiquement les contours de la couleur
 * Ajuster si besoin, pour s'inspirer vous avez le docuent suivant
 
-:download:`Idée de parametre pour la gravure et la découpe en fonction du materiau <_static/speedsfeeds_RL.pdf>`
+:download:`Idée de parametre pour la gravure et la découpe en fonction du materiau <../_static/speedsfeeds_RL.pdf>`
 
 .. attention::
 
