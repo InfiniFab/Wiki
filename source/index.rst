@@ -23,10 +23,11 @@ Vous pouvez continuer votre visite pour connaitre tout du projet InfiniFab !
    :maxdepth: 1
    :caption: Sommaire:
    :hidden:
+   :glob:
 
    infinifab
-   services
-   projets
+   Les Projets <projets>
+   Les Services <services>
 
 
 .. toctree::

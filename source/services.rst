@@ -1,7 +1,7 @@
 .. page pour decrire les services
 
-Les Services
-############
+Les Services de L'InfiniFab
+###########################
 
 L'InfiniFab reuni diverse compétences qui permettent d'offrir des services variés
 

@@ -1,7 +1,7 @@
 .. page pour decrire un fablab, le but de l'infinifab et l'objectifs
 
-L'infini Fab
-############
+L'InfiniFab
+###########
 
 Sur cette page, vous aurrez une description du projet "Infini Fab".
 
