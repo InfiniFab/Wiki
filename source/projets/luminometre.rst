@@ -19,7 +19,8 @@ Dans cette section, on définit les différents points auxquels doit répondre l
 * Donner l'information sur le niveau de luminosité via un signal sonore (entre 200Hz et 1500Hz, à définir avec l'utilisation).
 * Donner l'information sur le niveau de luminosité via une vibration (la continuité de la vibration baisse en fonction de l'intensité lumineuse).
 * L'utilisateur choisit le mode (buzzer/vibreur) via un bouton pour chaque mode, le Luminomètre fonctionne uniquement quand les boutons sont pressés.
-* Le Luminomètre doit avoir la taille et la forme approximative d'un briquet, être transportable.
+* L’appareil doit émettre un court signal vibrant suite à la mise en place des piles.
+* Le Luminomètre doit avoir la taille et la forme approximative d'un briquet et être transportable.
 
 Le 1er prototype
 ----------------
