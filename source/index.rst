@@ -15,7 +15,7 @@ De mon côté cela me permet d'avoir un moyen simple de mettre à jour ces infor
 
 :ref:`Vous trouverez ici les indications pour participer à la documentation <Doc_manuel>`
 
-Vous pouvez continuer votre visite pour connaitre tout du projet InfiniFab !
+Vous pouvez continuer votre visite pour connaitre tout du projet InfiniFab !!
 
 
 
