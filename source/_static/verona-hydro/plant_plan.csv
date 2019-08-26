@@ -1,0 +1,128 @@
+"S: R
+P: C
+N: 1","S: C
+P: C
+N: 3","S: C
+P: C
+N: 3","S: C
+P: C
+N: 5","S: R
+P: S
+N: 1","S: R
+P: S
+N: 1"
+"S: R
+P: C
+N: 1","S: C
+P: P
+N: 1","S: C
+P: C
+N: 3","S: C
+P: C
+N: 5","S: R
+P: S
+N: 1","S: R
+P: S
+N: 1"
+"S: R
+P: C
+N: 1","S: C
+P: P
+N: 2","S: C
+P: C
+N: 1","S: C
+P: C
+N: 5","S: R
+P: S
+N: 1","S: R
+P: S
+N: 1"
+"S: R
+P: C
+N: 8","S: C
+P: P
+N: 2","S: C
+P: S
+N: 1","S: C
+P: S
+N: 1","S: R
+P: S
+N: 1","S: R
+P: S
+N: 1"
+"S: R
+P: C
+N: 5","S: C
+P: P
+N: 1","S: C
+P: S
+N: 1","S: C
+P: S
+N: 1","S: R
+P: S
+N: 10","S: R
+P: S
+N: 10"
+"S: R
+P: C
+N: 10","S: C
+P: P
+N: 1","S: C
+P: S
+N: 10","S: C
+P: S
+N: 10","S: R
+P: S
+N: 10","S: R
+P: S
+N: 10"
+"S: R
+P: C
+N: 20","S: C
+P: P
+N: 1","S: C
+P: S
+N: 10","S: C
+P: S
+N: 10","S: R
+P: B
+N: 1","S: R
+P: B
+N: 1"
+"S: R
+P: C
+N: 1","S: R
+P: P
+N: 1","S: C
+P: B
+N: 1","S: C
+P: B
+N: 1","S: R
+P: B
+N: 1","S: R
+P: B
+N: 1"
+"S: R
+P: P
+N: 1","S: R
+P: P
+N: 1","S: C
+P: B
+N: 1","S: C
+P: B
+N: 1","S: R
+P: B
+N: 1","S: R
+P: B
+N: 1"
+"S: R
+P: P
+N: 2","S: R
+P: P
+N: 1","S: C
+P: B
+N: 1","S: C
+P: B
+N: 1","S: R
+P: B
+N: 1",Water Level Sensor
