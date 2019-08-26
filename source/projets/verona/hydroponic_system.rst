@@ -1,11 +1,11 @@
 Hydroponic automated System
 ===========================
 
-This page present the hydroponic system installed in fablab verona. Basic material is already present and used, the goal of this project is to integrate automation with sensors and computer and allow growing of plants with less human interaction possible.
+This page presents the hydroponic system installed in Verona FabLab. Basic material is already present and used, the goal of this project is to integrate automation with sensors and computer and allow growing of plants with less human interaction possible.
 
-This project is an inspiration of an already existing project, Ortocitiy. It is a culture of plants no by hydroponics but classical ground. The characteristic of Ortocity is to be based on LORA technology, it allows a complete autonomy of the system, and monitoring of it far away from first LORA gateway (about 10km).
+This project is an inspiration of an already existing project, Ortocity. It is a culture of plants not by hydroponics but classical soil. The characteristic of Ortocity is to be based on LORA technology, it allows a complete autonomy of the system, and monitoring of it far away from first LORA gateway (about 10km).
 
-The LORA technology has been explored, and a LORA gateway has been created to be setup in verona fablab. But this technology isn't relevant with the hydroponic system since its gonna be used localy at fablab where wifi network is close by and available all the time.
+The LORA technology has been explored, and a LORA gateway has been created to be setup in Verona FabLab. But this technology isn't relevant with the hydroponic system since its gonna be used localy at fablab where wifi network is close by and available all the time.
 
 The current material
 --------------------
@@ -99,12 +99,12 @@ Requirements:
 * Embeded system that control hydroponic installation
 
 1. Control temperature
-2. Monitore humidity
-3. Monitore Waterlevel
+2. Monitor humidity
+3. Monitor Waterlevel
 
 * Independant computer to control data and command embeded System
 
-1. Retrieve data from Embeded System
+1. Retrieve data from Embedded System
 2. Store data in database
 3. Propose User Interface to display data from Database
 4. Propose User Interface to control Embeded system values
@@ -115,7 +115,7 @@ Material used :
 
 **For the command and control part :**
 
-* raspberry Pi with Raspbian OS, with Node Red & Mosquitto Broker installed
+* Raspberry Pi with Raspbian OS, with Node-Red & Mosquitto Broker installed
 * Arduino MKR1000 connected by wifi to send MQTT messages
 * A DHT11 sensor connected to the arduino to get temperature and humidity value
 * A custom water level sensor
@@ -167,7 +167,7 @@ On Raspi, test mosquitto with 2 terminals, one for subscribe a topic, another to
 * -t : by topic
 * youtube/test: topic selected
 
-**pbulish on a topic**
+**publish on a topic**
 
 .. code-block ::
 
@@ -280,7 +280,7 @@ The code used has been commented to explain each library call, each function or 
 
 .. warning::
 
-  To compile correctly the code, its needed to install the following library through Adruino IDE
+  To compile correctly the code, its needed to install the following library through Arduino IDE
 
   * "WiFi" to allow Arduino MKR to use wifi function
   * "Adafruit Unified Sensor" & "DHT sensor library" to use DHT sensor
@@ -340,6 +340,8 @@ This can't be applied with the seed grower module because the waterlevel needs t
 
 The second solution is to use water conductivity between 2 metallic pins connected to arduino.
 
+MISSING IMAGES
+
 .. figure :: ../../_static/verona-hydro/IMG_20190820_165305618.JPG
 
   top of the support with graduation every 5 mm to setup distance between the 2 mettalic pins
@@ -352,7 +354,7 @@ The second solution is to use water conductivity between 2 metallic pins connect
 
 :download:`outside of the waterlevel sensor <../../_static/verona-hydro/waterlevel-outside.stl>`
 
-.. note :: to use water conductivity we use the alimentation of the water pump. If current is always ON, this lead to electrolyse around mettalic pins. The code in Arduino needs to prevent long period of current in the water
+.. note :: to use water conductivity we use the alimentation of the water pump. If current is always ON, this lead to electrolyse around metallic pins. The code in Arduino needs to prevent long period of current in the water
 
 Design of the support Box
 #########################
@@ -362,9 +364,13 @@ Plexy could be used but its complicated to glue it after and its more expensive
 
 **1rst model, good dimention but not water proof**
 
+ADD SOME IMAGES
+
 The first model could fit the seed box on top with a potential water tank at the bottom, but desperate try out to make a plywood box waterproof failed miserably (basically stick plastic to each face and use glue gun on each junction)
 
 **2nd model, support seed box and integrate basic water box**
+
+ADD SOME IMAGES
 
 On the 2nd design, it has been choosen to make a support that contain the seed box, and at the bottom the possibility to put a basic recipient that is waterproof.
 The design of the 2nd box has been a bit tricky, the design and reflexion on the support has been led on sketchup. Exporting to dxf from sketchup isn't possible with the free version.
@@ -395,8 +401,8 @@ Usages
 
 **Legend**
 
-* S : Subtrat used, R for rockwool, C for coconut
-* P : Plant seed choosen, C for carrt, P for pepper, B for bean, S for salad
+* S : Substrat used, R for rockwool, C for coconut
+* P : Plant seed choosen, C for carrot, P for pepper, B for bean, S for salad
 * N : number of seeds
 
 
