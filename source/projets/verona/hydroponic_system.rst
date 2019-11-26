@@ -1,6 +1,8 @@
 Hydroponic automated System
 ===========================
 
+ciao
+
 This page present the hydroponic system installed in fablab verona. Basic material is already present and used, the goal of this project is to integrate automation with sensors and computer and allow growing of plants with less human interaction possible.
 
 This project is an inspiration of an already existing project, Ortocitiy. It is a culture of plants no by hydroponics but classical ground. The characteristic of Ortocity is to be based on LORA technology, it allows a complete autonomy of the system, and monitoring of it far away from first LORA gateway (about 10km).
