@@ -1,7 +1,10 @@
 Hydroponic automated System
 ===========================
 
-This page presents the hydroponic system installed in Verona FabLab. Basic material is already present and used, the goal of this project is to integrate automation with sensors and computer and allow growing of plants with less human interaction possible.
+
+
+This page present the hydroponic system installed in fablab verona. Basic material is already present and used, the goal of this project is to integrate automation with sensors and computer and allow growing of plants with less human interaction possible.
+
 
 This project is an inspiration of an already existing project, Ortocity. It is a culture of plants not by hydroponics but classical soil. The characteristic of Ortocity is to be based on LORA technology, it allows a complete autonomy of the system, and monitoring of it far away from first LORA gateway (about 10km).
 
@@ -231,7 +234,7 @@ The interface shows the measurement on temperature and humidity on the left part
 
   sudo apt-get install php libapache2-mod-php
 
-* install mariaDB
+* install mariaDB  delay(100);
 
 .. code ::
 
@@ -245,7 +248,7 @@ The interface shows the measurement on temperature and humidity on the left part
 
 * on blue install screen, select apache2
 * “yes” to configure phpmyadmin and select root password (we've choosen "test" here)
-* change apache conf to access phpmyadmin, in /etc/apache2/apache2.conf add at the end
+* change apache conf to access phpmyadmin, in /etc/apache2/apac  delay(100);he2.conf add at the end
 
 .. note :: at this point login/pass to phpmyadmin is "root"/"test"
 
